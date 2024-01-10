@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../css//style.css">
+    <link rel="stylesheet" href="../css/students.css">
+    <link rel="stylesheet" href="../css/seidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        crossorigin="anonymous">
+
+    <style>
+        .custom-swal {
+            background-color: #2b3467;
+            color: white;
+        }
+
+        .custom-swal .swal2-confirm {
+            background-color: #fedb39;
+        }
+
+        .custom-swal .swal2-deny {
+            background-color: #132043;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar-container">
+        <div class="sidebar">
+            <div class="links-field">
+                <div class="logo">
+                    <h1>Web Office</h1>
+                </div>
+                <a href="welcome.html"><i class="fas fa-home"></i>Dashboard</a>
+                <a href="students.html"><i class="fas fa-users"></i>Students</a>
+                <a href="todo.html"><i class="fas fa-check"></i>Todo</a>
+                <a href="feedbacks.html"><i class="fas fa-users"></i>Feedbacks</a>
+                <a href="trainer.html" class="addTrainer"><i class="fas fa-users"></i>Trainer</a>
+            </div>
+
+
+            <div class="profile-field">
+                <a href="../html/register.html" class="add-trainer"><i class="fas fa-plus"></i>Add Trainer</a>
+                <div class="profile">
+                    <div class="profile-name-image" id="sidebare-profile">
+                        <div>
+                            <img src="https://th.bing.com/th/id/OIP.CVfz0e-F_vCMJ9428mFlhwHaD4?w=768&h=402&rs=1&pid=ImgDetMain"
+                                alt="profile">
+                        </div>
+                        <div>
+                            <h4 id="sidebar-user-name"></h4>
+                            <p id="sidebar-role"></p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fas fa-sign-out-alt" id="sidebar-logout"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-overlay">
+        </div>
+    </div>
+    <div class="sidebar-burger-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <!-- End Sidebar -->
+
+
+    <div class="students">
+        <div class="students-Container">
+            
+            <div class="students-Containert-Header">
+                <h1>Students</h1>
+                <button class="btn" id="addStudentForm">Add Student</button>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search...">
+            </div>
+            <div class="table-Container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="thead">Student Name</th>
+                            <th class="thead">Rate</th>
+                            <th class="thead"># Absence</th>
+                            <th class="thead">Done Tasks</th>
+                            <th class="thead"># Of Tasks</th>
+                            <th class="thead">Feedback</th>
+                            <th class="thead" id="edit-field">Edit</th>
+                            <th class="thead" id="del-field">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="popupForm" class="popup" style="display: none;">
+        <form id="studentForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="birthDate">Birth Date:</label>
+            <input type="date" id="birthDate" name="birthDate" required>
+
+            <label for="mobile">Mobile:</label>
+            <input type="tel" id="mobile" name="mobile" required>
+
+            <label for="imgUrl">Image URL:</label>
+            <input type="url" id="imgUrl" name="imgUrl" required>
+
+            <button type="button" id="addStudentBtn">Add Student</button>
+        </form>
+        <span class="close" id="closeX">&times;</span>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <script type="module" src="../js/students.js"></script>
+    <script type="module" src="../js/models/models.js"></script>
+    <script type="module" src="../js/sidebar.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/seidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar-container">
+        <div class="sidebar">
+            <div class="links-field">
+                <div class="logo">
+                    <h1>Web Office</h1>
+                </div>
+                <a href="welcome.html"><i class="fas fa-home"></i>Dashboard</a>
+                <a href="students.html"><i class="fas fa-users"></i>Students</a>
+                <a href="todo.html"><i class="fas fa-check"></i>Todo</a> 
+                <a href="feedbacks.html"><i class="fas fa-comment"></i>Feedbacks</a>
+                <a href="trainer.html" class="addTrainer"><i class="fas fa-users"></i>Trainer</a>
+            </div>
+
+
+            <div class="profile-field">
+                <a href="../html/register.html" class="add-trainer"><i class="fas fa-plus"></i>Add Trainer</a>
+                <div class="profile" >
+                    <div class="profile-name-image" id="sidebare-profile">
+                        <div>
+                            <img src="https://th.bing.com/th/id/OIP.CVfz0e-F_vCMJ9428mFlhwHaD4?w=768&h=402&rs=1&pid=ImgDetMain" alt="profile">
+                        </div>
+                        <div>
+                            <h4 id="sidebar-user-name"></h4>
+                            <p id="sidebar-role"></p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fas fa-sign-out-alt" id="sidebar-logout"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-overlay">
+        </div>
+    </div>
+
+    <div class="sidebar-burger-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <!-- End Sidebar -->
+
+
+    <div class="profileContainer">
+        <h2 class="custom-heading">Profile</h2>
+        <div id="UserProfileForm">
+            <div class="user-image-container">
+                <img class="user-image" id="userImage" width="274px" height="274px" src="../resources/profile.jpg"
+                    alt="user picture">
+            </div>
+            <br>
+            <label class="form-label" for="Firstnamee">First Name</label>
+            <input id="userFirstNameInput" type="text" value="">
+            <label class="form-label" for="Lastnamee">Last Name</label>
+            <input id="userLastNameInput" type="text" value="">
+            <label class="form-label" for="Emaill">Email</label>
+            <input id="userEmailInput" type="email" value="">
+            <label class="form-label"  for="imageURl">ImageUrl</label>
+            <input type="text" id="imageURl" placeholder="Enter your image URL"/>
+            <!-- <label class="form-label" for="Passwordd">Password</label>
+            <input id="userPasswordInput" type="password" value=""> -->
+            <br>
+            <button id="saveChangesButton" class="saveChangesButton">Edit</button>
+        </div>
+    </div>
+
+    <script type="module" src="../js/profile.js"></script>
+    <script type="module" src="../js/sidebar.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

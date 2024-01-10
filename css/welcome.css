@@ -1,0 +1,315 @@
+:root{  
+    --bg-color: #132043;
+    --second-bg-color: #2b3467;
+    --text-color: #fcffe7;
+    --text-color2: rgba(197, 196, 196, 0.748);
+    --main-color: #fedb39;
+    --glass-color: rgba(108, 108, 108, 0.135);
+
+    --box-shadow: 0 1em 3em 0.4em rgba(0, 0, 0, 0.193);
+    --boder-radiues: 1em;
+}
+
+
+
+@keyframes vibrateBorderLines{
+    0%{
+        outline: 0.3em solid var(--main-color);
+        outline-offset: 0em;
+    }
+    90%{
+        outline: 0em solid transparent;
+        outline-offset: 1.5em;
+    }    
+
+}
+
+@keyframes avatartAnimation{
+    0%{
+        outline: 0.3em solid var(--main-color);
+        outline-offset: 0em;
+    }
+    90%{
+        outline: 0em solid transparent;
+        outline-offset: 1.5em;
+    }    
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}
+
+
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+    width: 80%;
+    margin: 5em auto;
+    /* 5 circles in the background */
+    background-image: radial-gradient(circle, var(--main-color) 0.5em, transparent 0.5em), radial-gradient(circle, var(--main-color) 0.5em, transparent 0.5em), radial-gradient(circle, var(--main-color) 0.5em, transparent 0.5em), radial-gradient(circle, var(--main-color) 0.5em, transparent 0.5em), radial-gradient(circle, var(--main-color) 0.5em, transparent 0.5em);
+}
+
+h1{
+    font-size: 3em;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+}
+.welcome-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4em;
+}
+
+.welcome-section img{
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--box-shadow);
+    background-color: var(--main-color);
+    /* border: 0.3em solid var(--main-color); */
+    animation: avatartAnimation 1s infinite;
+}
+
+.welcome-section span{
+    text-decoration: underline;
+    text-decoration-color: var(--main-color);
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.4em; 
+}
+
+.welcome-section h1{
+    font-size: 4em;
+}
+
+.statistic-section, .news-section, .announcements-section{
+    display: flex;
+    flex-direction: column;
+    padding:  1em 4em;
+    background-color: var(--glass-color);   
+    border-radius: var(--boder-radiues);
+}
+
+.news-section h3, .announcements-section h3{
+    text-decoration: underline;
+    text-decoration-color: var(--main-color);
+    text-decoration-thickness: 0.1em;
+     
+}
+
+.title> h2{
+    font-size: 2em;
+    margin: 1em 0 0.6em 0 ;
+}
+
+.cards{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1.3em;
+    flex-wrap: wrap;
+    padding: 3em;   
+}
+
+.cards > div:hover{
+    animation: vibrateBorderLines 1s infinite;
+    transition: all 1s;
+}
+
+
+/* Statistic Section */
+.statistic-section > .statistic-cards > .statistic-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1em;
+    background-color: var(--second-bg-color);
+    padding:  2em 1em 2em 2em;
+    box-sizing: border-box;
+    border-radius: var(--boder-radiues);
+    box-shadow: var(--box-shadow);
+}
+
+
+.statistic-section > .statistic-cards > .statistic-card > .left{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.statistic-section > .statistic-cards > .statistic-card > .left *{
+    margin: 0;
+}
+
+.statistic-section > .statistic-cards > .statistic-card > .left h1{
+    font-size: 2em;
+    color: var(--text-color2);
+}
+
+
+.statistic-section > .statistic-cards > .statistic-card > .right > #progress{
+    width:8em;
+    height: 0.5em;
+    background-color: var(--bg-color);
+    border-radius: 0.5em;
+    opacity: 0.5;
+    margin: 1em 0;
+}
+
+.statistic-section > .statistic-cards > .statistic-card > .right > #progress > #bar{
+    width: 50%;
+    height: 100%;
+    background-color: var(--main-color);
+    border-radius: 0.5em;
+}
+
+/* News Section */
+.news-section > .news-cards > .news-card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--second-bg-color);
+    padding: 2em;
+    box-sizing: border-box;
+    border-radius: var(--boder-radiues);
+    gap: 1em;
+    box-shadow: var(--box-shadow);
+    width: 30em;
+    cursor: pointer;
+}
+
+.news-section > .news-cards > .news-card > .top > img{
+    width: 100%;
+    height: 20em;
+    border-radius: var(--boder-radiues);
+    object-fit: cover;
+}
+
+.news-section > .news-cards > .news-card:hover > .top > img{
+    opacity: 0.4;
+    transition: all 0.5s;
+}
+
+/* announcements */
+.announcements-section > .announcement-cards > .announcement-card{
+    background-color: var(--second-bg-color);
+    padding: 1em 1.3em;
+    box-sizing: border-box;
+    border-radius: var(--boder-radiues);    
+    cursor: pointer;
+    width: 30em;
+    
+}
+
+
+
+/* Modal */
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--glass-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(0.5em);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+}
+
+
+.modal-content{
+    background-color: var(--second-bg-color);
+    padding: 1.5em 3em;
+    border-radius: var(--boder-radiues);   
+    box-shadow: var(--box-shadow);
+    width: 60vw;
+}
+
+.modal-content > .modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+
+
+.modal-content > .modal-header h2{
+    text-decoration: underline;
+    text-decoration-color: var(--main-color);
+    text-decoration-thickness: 0.2em;
+    text-underline-offset: 0.6em; 
+    font-size: 2.2em;
+}
+
+.modal-content > .modal-body p{
+    font-size: 1.8em;
+    line-height: 1.5;
+    Overflow: hidden;    
+}
+.modal-content > .modal-header .close{
+    font-size: 3.5em;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.modal-content > .modal-header .close:hover{
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.modal-content > .modal-body{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+
+.modal-content > .modal-body img{
+    border-radius: var(--boder-radiues);
+    object-fit: cover;
+    height: 40em;
+    width: 100%;
+    opacity: 0.8;
+}
+
+
+@keyframes handanimation{
+    0% {transform: rotateZ(15deg);}
+    50% {transform: rotateZ(-20deg);}
+    100% {transform: rotateZ(15deg);}
+}
+
+@-webkit-keyframes handanimation{
+    0% {transform: rotate(-15deg);}
+    50% {transform: rotate(15deg);}
+    100% {transform: rotate(-15deg);}
+}
+
+#hand{
+    display: inline-block;
+    transform-origin: 100% 100%;
+    animation: handanimation 1.3s infinite;
+    text-decoration: none;
+}

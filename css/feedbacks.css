@@ -1,0 +1,95 @@
+:root{  
+    --bg-color: #132043;
+    --second-bg-color: #2b3467;
+    --text-color: #fcffe7;
+    --text-color2: rgba(197, 196, 196, 0.748);
+    --main-color: #fedb39;
+    --glass-color: rgba(108, 108, 108, 0.135);
+
+    --box-shadow: 0 1em 3em 0.4em rgba(0, 0, 0, 0.193);
+    --boder-radiues: 1em;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--glass-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(0.5em);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+
+    font-size: 2em;
+}
+
+.modal >.modal-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: var(--second-bg-color);
+    padding: 1.5em 3em;
+    border-radius: var(--boder-radiues);
+    box-shadow: var(--box-shadow);
+    width: 20em;
+    color: var(--main-color);
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.1em;
+}
+
+form > input, form > textarea{
+    border-radius: 8px;
+    border: 1px solid var(--main-color);
+    outline: none;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    font-size: 1em;
+    padding: 0.5em 0.5em;
+}
+
+form > button{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 1em 1em;
+}
+
+form > select{
+    border-radius: 8px;
+    border: 1px solid var(--main-color);
+    outline: none;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    font-size: 1em;
+}
+
+form option{
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    font-size: 1em;
+}
+
+.close{
+    position: relative;
+    font-size: 2em;
+    color: var(--text-color);
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.close:hover{
+    color: var(--main-color);
+}

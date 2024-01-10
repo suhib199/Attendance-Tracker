@@ -1,0 +1,85 @@
+:root {
+  --bg-color: #132043;
+  --second-bg-color: #2b3467;
+  --text-color: #fcffe7;
+  --text-color2: rgba(197, 196, 196, 0.748);
+  --main-color: #fedb39;
+  --glass-color: rgba(108, 108, 108, 0.2);
+  --font-family: "Fredoka", sans-serif;
+  --box-shadow: 0 1em 3em 0.4em rgba(0, 0, 0, 0.193);
+  --border-radius: 1em;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.profileContainer {
+  background-color: var(--second-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  text-align: center;
+  width: 40em;
+  border: 2px solid var(--main-color);
+  transition: 0.5s ease;
+}
+
+.profileContainer:hover {
+  box-shadow: 0 0.4rem 1rem var(--main-color);
+}
+.custom-heading {
+  color: var(--main-color);
+  font-size: 3.4em;
+  margin-bottom: 20px;
+}
+
+.user-image {
+  width: 12em;
+  height: 12em;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--box-shadow);
+  background-color: var(--main-color);
+}
+
+.form-label {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input {
+  width: 70%;
+  padding: 9px;
+  font-size: 1.8em;
+  border: 2px solid var(--main-color);
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+#saveChangesButton {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#saveChangesButton:hover {
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  color: var(--text-color);
+}

@@ -1,0 +1,146 @@
+:root {
+    --bg-color: #132043;
+    --second-bg-color: #2b3467;
+    --text-color: #fcffe7;
+    --main-color: #fedb39;
+    --font-family: 'Fredoka', sans-serif;
+    --border-radius: 1em;
+}
+
+html {
+    font-size: 60%;
+}
+
+body {
+    background: var(--bg-color);
+    margin: 0;
+    font-family: var(--font-family);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border: 1px solid #ffffff;
+    color: #080710;
+    font-size: 16.5px;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+.background {
+    width: 430px;
+    height: 620px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.background .shape {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape:first-child {
+    background: linear-gradient(var(--main-color), var(--bg-color));
+    left: -80px;
+    top: -80px;
+}
+
+.shape:last-child {
+    background: linear-gradient(var(--bg-color), var(--main-color));
+    right: -30px;
+    bottom: -530px;
+}
+
+form {
+    height: 1000px;
+    width: 450px;
+    margin-top: 90px;
+    background-color: rgba(255, 255, 255, 0.13);
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 20px 35px 10px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form * {
+    color: #ffffff;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+}
+
+form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.name-fields {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.first-name,
+.last-name {
+    width: 48%;
+
+}
+
+input {
+    height: 45px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+::placeholder {
+    color: #e5e5e5;
+}
+
+button {
+    margin-top: 25px;
+    width: 50%;
+    background-color: #fad73b;
+    color: #080710;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.error-message {
+    color: black;
+    font-size: 14px;
+    margin-top: 5px;
+}

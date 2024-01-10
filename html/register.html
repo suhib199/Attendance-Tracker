@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/seidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <!--Header Design-->
+    <!-- <header class="header">
+        <a href="#home">
+            <h5>Attendance Tracker</h5>
+        </a>
+        <nav class="navbar">
+            <a href="../index.html">Home</a>
+
+            <a href="../html/index.html?#about">About</a>
+        </nav>
+    </header> -->
+    <form id="registrationForm">
+        <h3>Register</h3>
+        <div class="name-fields">
+            <div class="first-name">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" placeholder="Enter your first name" reuired />
+                <div id="firstNameError" class="error-message" ></div>
+            </div>
+            <div class="last-name">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" placeholder="Enter your last name" required />
+                <div id="lastNameError" class="error-message"></div>
+            </div>
+        </div>
+        
+
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter your email" required />
+        <div id="emailError" class="error-message"></div>
+
+        <label for="password">Password</label>
+        <input type="text" id="password" placeholder="Enter your password" required />
+        <div id="passwordError" class="error-message"></div>
+
+        <label for="hiringDate">Hiring Date</label>
+        <input type="date" id="hiringDate" placeholder="Hiring Date" required />
+        <div id="hiringDateError" class="error-message"></div>
+
+        <label for="birthDate">Birth Date</label>
+        <input type="date" id="birthDate" placeholder="Enter your birth date" required />
+        <div id="birthDateError" class="error-message"></div>
+
+        <label for="imgURL">Image URL</label>
+        <input type="text" id="imgURL" placeholder="Enter your image URL" required />
+        <div id="imgURLError" class="error-message"></div>
+
+        <label for="mobile">Mobile</label>
+        <input type="text" id="mobile" placeholder="Enter your mobile number" required />
+        <div id="mobileError" class="error-message"></div>
+
+        <button type="submit" id="registerButton">Register</button>
+    </form>
+    
+
+       <!-- Sidebar -->
+       <div class="sidebar-container">
+        <div class="sidebar">
+            <div class="links-field">
+                <div class="logo">
+                    <h1>Web Office</h1>
+                </div>
+                <a href="welcome.html"><i class="fas fa-home"></i>Dashboard</a>
+                <a href="students.html"><i class="fas fa-users"></i>Students</a>
+                <a href="todo.html"><i class="fas fa-check"></i>Todo</a> 
+                <a href="feedbacks.html"><i class="fas fa-comment"></i>Feedbacks</a>
+                <a href="trainer.html" class="addTrainer"><i class="fas fa-users"></i>Trainer</a>
+            </div>
+
+
+            <div class="profile-field">
+                <a href="../html/register.html" class="add-trainer"><i class="fas fa-plus"></i>Add Trainer</a>
+                <div class="profile" >
+                    <div class="profile-name-image" id="sidebare-profile">
+                        <div>
+                            <img src="https://th.bing.com/th/id/OIP.CVfz0e-F_vCMJ9428mFlhwHaD4?w=768&h=402&rs=1&pid=ImgDetMain" alt="profile">
+                        </div>
+                        <div>
+                            <h4 id="sidebar-user-name"></h4>
+                            <p id="sidebar-role"></p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fas fa-sign-out-alt" id="sidebar-logout"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-overlay">
+        </div>
+    </div>
+
+    <div class="sidebar-burger-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <!-- End Sidebar -->
+
+
+    <script type="module"  src="../js/register.js"></script>
+    <script type="module"  src="../js/sidebar.js"></script>
+   
+</body>
+</html>

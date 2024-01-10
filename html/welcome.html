@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Office - Welcome</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/welcome.css">
+    <link rel="stylesheet" href="../css/seidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <script type="module" src="../js/welcome.js"></script>
+    <div class="container">
+        <div class="welcome-section">
+            <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=admin" alt="personal-image">
+
+            <h1>Hola <span id="hand">👋</span> ,  <span id="name"></span></h1>
+        </div>
+
+        <div class="statistic-section">
+                <div class="title">
+                    <h2><i class="fas fa-chart-bar"></i>Statistics</h2>
+                    <hr>
+                </div>
+
+                <div class="statistic-cards cards">
+
+                </div>
+
+        </div>
+
+        <div class="news-section">
+            <div class="title">
+                <h2><i class="fas fa-newspaper"></i> News</h2>
+
+                <hr>
+            </div>
+
+            <div class="news-cards cards">
+ 
+            </div>
+
+        </div>
+        
+        <div class="announcements-section">
+            <div class="title">
+                <h2><i class="fas fa-bullhorn"></i> Announcements</h2>
+                <hr>
+            </div>
+            <div class="announcement-cards cards">
+
+            </div>
+        </div>
+
+    </div>  
+
+    <div class="modal news-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>News Title</h2>
+                <span class="close" >&times;</span>
+            </div>
+            <div class="modal-body">
+                <img src="https://th.bing.com/th/id/OIP.CVfz0e-F_vCMJ9428mFlhwHaD4?w=768&h=402&rs=1&pid=ImgDetMain" alt="news" >
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal announcement-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Announcement Title</h2>
+                <span  class="close" >&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            </div>
+        </div> 
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar-container">
+        <div class="sidebar">
+            <div class="links-field">
+                <div class="logo">
+                    <h1>Web Office</h1>
+                </div>
+                <a href="welcome.html"><i class="fas fa-home"></i>Dashboard</a>
+                <a href="students.html"><i class="fas fa-users"></i>Students</a>
+                <a href="todo.html"><i class="fas fa-check"></i>Todo</a> 
+                <a href="feedbacks.html"><i class="fas fa-comment"></i>Feedbacks</a>
+                <a href="trainer.html" class="addTrainer"><i class="fas fa-users"></i>Trainer</a>
+            </div>
+
+
+            <div class="profile-field">
+                <a href="../html/register.html" class="add-trainer"><i class="fas fa-plus"></i>Add Trainer</a>
+                <div class="profile" >
+                    <div class="profile-name-image" id="sidebare-profile">
+                        <div>
+                            <img src="https://th.bing.com/th/id/OIP.CVfz0e-F_vCMJ9428mFlhwHaD4?w=768&h=402&rs=1&pid=ImgDetMain" alt="profile">
+                        </div>
+                        <div>
+                            <h4 id="sidebar-user-name"></h4>
+                            <p id="sidebar-role"></p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fas fa-sign-out-alt" id="sidebar-logout"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-overlay">
+        </div>
+    </div>
+
+    <div class="sidebar-burger-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <!-- End Sidebar -->
+
+    <script type="module" src="../js/sidebar.js"></script>
+</body>
+</html>

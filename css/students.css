@@ -1,0 +1,227 @@
+:root {
+  --bg-color: #132043;
+  --second-bg-color: #2b3467;
+  --text-color: #fcffe7;
+  --main-color: #fedb39;
+  --font-family: "Fredoka", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+
+.students {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-Container {
+  height: 50em;
+  overflow: auto;
+}
+.students-Container {
+  width: 66vw;
+  margin-top: 10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.thead {
+  position: sticky;
+}
+
+.students-Containert-Header {
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 1em;
+  justify-content: space-between;
+}
+
+.table-container {
+  height: 200px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+th,
+td {
+  font-size: 1.5em;
+  padding: 1em;
+  border-bottom: 1px solid var(--second-bg-color);
+  text-align: center;
+}
+
+th {
+  background-color: var(--second-bg-color);
+  color: var(--main-color);
+}
+
+tr:hover {
+  background-color: var(--second-bg-color);
+}
+
+.editBtn,
+.deleteBtn {
+  padding: 8px;
+  background-color: var(--bg-color);
+  color: var(--bg-color);
+  cursor: pointer;
+  border-radius: 2em;
+  border: 0.2em solid var(--main-color);
+  color: var(--text-color);
+  font-size: 0.8em;
+  transition: 0.5s ease;
+}
+.plusBtn {
+  padding: 0.5px 6px;
+  background-color: var(--bg-color);
+  color: var(--bg-color);
+  cursor: pointer;
+  border-radius: 2em;
+  border: 0.2em solid var(--main-color);
+  color: var(--text-color);
+  font-size: 0.8em;
+  transition: 0.5s ease;
+}
+.editBtn:hover,
+.deleteBtn:hover,
+.plusBtn:hover {
+  box-shadow: 0 0 1rem var(--main-color) !important;
+}
+.btn {
+  display: inline-block;
+  padding: 1.6rem 3.5rem;
+  background: var(--bg-color);
+  border-radius: 4rem;
+  font-size: 1.3rem;
+  color: var(--text-color);
+  border: 0.2em solid var(--main-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  box-shadow: 0 0 1rem var(--main-color) !important;
+}
+
+.table-Container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.table-Container::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 8px;
+}
+
+.table-Container::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
+#popupForm {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40em;
+  z-index: 100;
+  background-color: var(--second-bg-color);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+#popupForm form {
+  display: grid;
+  gap: 10px;
+}
+
+#popupForm label {
+  font-size: 1.3em;
+  color: var(--main-color);
+}
+
+#popupForm input {
+  width: 100%;
+  padding: 7px;
+  font-size: 2em;
+  border: 2px solid var(--main-color);
+  border-radius: 8px;
+}
+
+#popupForm button {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.3em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#popupForm button:hover {
+  background-color: #feca57;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  backdrop-filter: blur(5px);
+}
+
+.overlay.active {
+  display: block;
+}
+
+.search-container{
+
+  margin-bottom: 5em;
+}
+
+
+#searchInput{
+  width: 100%;
+  padding: 0.5em 1em;
+  font-size: 2em;
+  border-radius: 1em;
+  background-color: var(--second-bg-color);
+  color: var(--text-color);
+}
+
+#searchInput:focus{
+  outline: none;
+  border: 1px solid var(--main-color);
+}
+
+
+

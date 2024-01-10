@@ -1,0 +1,41 @@
+{
+   "news": [
+       {
+           "id": 1,
+           "title": "Scientists Make Breakthrough in Renewable Energy Research",
+           "description": "A team of researchers has achieved a significant breakthrough in renewable energy, paving the way for more sustainable power sources.",
+           "imageUrl": "https://th.bing.com/th/id/OIP.BAlW8o2QK3Ayy08tihHX6wHaE7?rs=1&pid=ImgDetMain"
+       },
+       {
+           "id": 2,
+           "title": "Global Efforts to Combat Climate Change Intensify",
+           "description": "Countries around the world are stepping up their efforts to combat climate change, with new initiatives and commitments being announced at the latest international summit.",
+           "imageUrl": "https://th.bing.com/th/id/OIP.qkoLl4OftcQBl2HnwGTY2QHaE8?w=1024&h=683&rs=1&pid=ImgDetMain"
+       },
+       {
+           "id": 3,
+           "title": "Advancements in Space Exploration Technology",
+           "description": "The latest developments in space exploration technology promise exciting possibilities for future missions beyond our solar system.",
+           "imageUrl": "https://www.flexiform.co.uk/wp-content/uploads/2022/02/Pico-Desk-Goalpost-Leg.jpg"
+       },
+       {
+           "id": 4,
+           "title": "Innovations in Healthcare Improve Patient Outcomes",
+           "description": "Medical researchers have unveiled groundbreaking innovations that are set to revolutionize healthcare and improve patient outcomes.",
+           "imageUrl": "https://th.bing.com/th/id/OIP.326CDT_DD9KVlcAw24JrbAHaEK?w=1920&h=1080&rs=1&pid=ImgDetMain"
+       },
+       {
+           "id": 5,
+           "title": "Educational Initiatives to Address Global Learning Gaps",
+           "description": "Efforts to bridge educational gaps on a global scale are underway, with new initiatives focusing on providing quality education for all.",
+           "imageUrl": "https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?cs=srgb&dl=people-office-inside-1170412.jpg&fm=jpg"
+       },
+       {
+           "id": 6,
+           "title": "Tech Giants Collaborate on Ethical AI Development",
+           "description": "Major technology companies have joined forces to prioritize and develop ethical artificial intelligence, ensuring responsible use of AI technologies.",
+           "imageUrl": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8b2ZmaWNlfHwwfHx8fDE2MzA1Njg3MjQ&ixlib=rb-1.2.1&q=80&w=1080"
+       }
+
+   ]
+}
